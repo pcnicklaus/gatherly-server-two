@@ -123,9 +123,9 @@ router.post('/character', function (req, res, err) {
 
 // *** GATHER *** //
 router.post('/gather', function (req, res, err) {
-    // 3 experiences 
+    // 3 experiences
     // 4 roles
-    // 
+    //
 
 
     console.log('gather');

@@ -43,16 +43,16 @@ app.use(flash());
 
 app.use('/auth', authRoutes);
 app.use('/data', dataRoutes);
-app.use('/', function (req, res) {
-    console.log('main');
-    res.sendFile(path.join(__dirname, '../client', 'index.html'));
-});
+// app.use('/', function (req, res) {
+//     console.log('main');
+//     res.sendFile(path.join(__dirname, '../client', 'index.html'));
+// });
 
 
 // *** mongoose *** ///
 
 
-mongoose.connect(process.env.MONGOLAB_URI || config.mongoURI[app.settings.env], function (err, res) {
+mongoose.connect(process.env.MONGOLAB_URI, function (err, res) {
     if (err) {
         console.log('Error connecting to the database. ' + err);
     } else {
