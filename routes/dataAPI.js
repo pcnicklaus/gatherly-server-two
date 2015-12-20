@@ -8,6 +8,13 @@ var query = require('../queries/query.js')
 
 // *** EXPERIENCE *** //
 
+routrt.post('/user', function(req, res,err){
+if(err){console.log(err)}
+    else{console.log(req.header)}
+    res.end()
+}
+})
+
 router.post('/experience', function (req, res, err) {
     console.log('experience');
     new db.Experience({
@@ -145,4 +152,4 @@ router.post('/gather', function (req, res, err) {
         .done();
 })
 
-module.exports = router
+module.exports = router;
